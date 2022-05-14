@@ -1,0 +1,96 @@
+// ABSTRACT
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+// BASE
+@use '../base/resets' as *;
+@use '../base/typography' as *;
+
+// COMPONENTS
+@use '../components/main-bg-img' as *;
+
+
+#header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: $white;
+
+    .hero-text {
+        .hero-title {
+            font-weight: map-get($font-weight, "thin");
+
+            #fpt {
+                font-weight: map-get($font-weight, "medium");
+                display: block;
+            }
+        }
+
+    }
+
+    .register-form {
+        display: flex;
+        margin-top: 40px;
+
+        input {
+            width: 100%;
+            padding: 15px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            background: transparent;
+            border: 1px solid $white;
+            color: $white;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: $white;
+            }
+        }
+
+    }
+
+}
+
+@include tablet {
+    #header-section {
+        padding: 20px;
+
+        .hero-text {
+            .hero-title {
+                font-size: 35px;
+            }
+        }
+
+        .register-form {
+            input {
+                padding: 10px 10px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    #header-section {
+        padding: 20px;
+
+        .hero-text {
+            .hero-title {
+                font-size: 25px;
+            }
+        }
+
+        .register-form {
+            display: grid;
+
+            input {
+                padding: 10px 10px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

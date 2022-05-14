@@ -1,0 +1,135 @@
+// ABSTRACT
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+// BASE
+@use '../base/resets' as *;
+@use '../base/typography' as *;
+
+#this-is-awesome-app-section {
+    position: relative;
+    overflow-x: hidden;
+
+    .this-is-awesome-app-container {
+        .this-is-awesome-app-container-item {
+            .this-is-awesome-app-container-item-content {
+                padding-right: 50px;
+
+                .this-is-awesome-app-container-title {
+                    font-size: 30px;
+                }
+
+                .this-is-awesome-app-container-p {
+                    margin-top: 15px;
+                    font-size: 14px;
+                    font-weight: map-get($font-weight, "light");
+                }
+            }
+
+        }
+
+        .this-is-awesome-app-container-item1 {
+            padding: 50px 50% 50px 250px;
+            background-color: $light-yellow;
+        }
+
+        .this-is-awesome-app-container-item2 {
+            padding: 50px 50% 100px 250px;
+            background-color: $light-gray;
+
+            #download-now-btn {
+                margin-top: 20px;
+                background-color: $dark-blue;
+                color: $white;
+            }
+        }
+    }
+
+    .macbook-laptop-img {
+        max-width: 900px;
+        position: absolute;
+        top: 0;
+        right: -170px;
+    }
+}
+
+@include desktop {
+    #this-is-awesome-app-section {
+        .this-is-awesome-app-container {
+
+            .this-is-awesome-app-container-item1 {
+                padding: 50px 50% 50px 150px;
+                background-color: $light-yellow;
+            }
+
+            .this-is-awesome-app-container-item2 {
+                padding: 50px 50% 100px 150px;
+                background-color: $light-gray;
+            }
+        }
+
+        .macbook-laptop-img {
+            top: 50px;
+            max-width: 800px;
+        }
+    }
+}
+
+@include laptop {
+    #this-is-awesome-app-section {
+        .this-is-awesome-app-container {
+
+            .this-is-awesome-app-container-item1 {
+                padding: 50px 50% 50px 100px;
+                background-color: $light-yellow;
+            }
+
+            .this-is-awesome-app-container-item2 {
+                padding: 50px 50% 100px 100px;
+                background-color: $light-gray;
+            }
+        }
+
+        .macbook-laptop-img {
+            top: 70px;
+            max-width: 700px;
+        }
+    }
+}
+
+
+@include tablet {
+    #this-is-awesome-app-section {
+        .this-is-awesome-app-container {
+            .this-is-awesome-app-container-item {
+                padding: 50px;
+
+                .this-is-awesome-app-container-item-content {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .macbook-laptop-img {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    #this-is-awesome-app-section {
+        .this-is-awesome-app-container {
+            .this-is-awesome-app-container-item {
+                padding: 50px;
+
+                .this-is-awesome-app-container-item-content {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .macbook-laptop-img {
+            display: none;
+        }
+    }
+}

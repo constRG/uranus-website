@@ -1,0 +1,23 @@
+// ABSTRACT 
+@use './abstracts/colors';
+@use './abstracts/breakpoints';
+
+// BASE
+@use './base/resets';
+@use './base/typography';
+
+// COMPONENTS
+@use './components/main-bg-img';
+@use './components/buttons';
+@use './components/scroll-up-btn';
+
+// LAYOUT
+@use './layout/nav';
+@use './layout/footer';
+
+// SECTIONS 
+@use './sections/header-section';
+@use './sections/services-section';
+@use './sections/our-team-section';
+@use './sections/this-is-awesome-app-section';
+@use './sections/how-our-app-works-section';

@@ -1,0 +1,96 @@
+// ABSTRACT
+@use '../abstracts/colors' as *;
+@use '../abstracts/breakpoints' as *;
+
+// BASE
+@use '../base/resets' as *;
+@use '../base/typography' as *;
+
+#footer-section {
+    background-color: $dark-blue;
+    padding: 100px 250px;
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        column-gap: 20px;
+
+        .footer-item {
+            margin-bottom: 40px;
+            text-align: center;
+
+            .footer-item-title {
+                font-size: 15px;
+                color: $white;
+            }
+
+            .footer-link-list {
+                margin-top: 15px;
+
+                .footer-link-item {
+                    margin-bottom: 15px;
+
+                    font-size: 15px;
+
+                    .footer-link {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 50px;
+        text-align: center;
+        color: $white;
+        font-weight: map-get($font-weight, "light");
+        font-size: 13px;
+
+        #symu {
+            font-weight: map-get($font-weight, "bold");
+        }
+    }
+
+    .developer {
+        text-align: center;
+        color: $white;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+
+@include desktop {
+    #footer-section {
+        padding: 100px 150px;
+    }
+}
+
+@include laptop {
+    #footer-section {
+        padding: 100px 100px;
+    }
+}
+
+@include tablet {
+    #footer-section {
+        padding: 100px 50px;
+
+        .footer-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@include mobile {
+    #footer-section {
+        padding: 100px 50px;
+
+        .footer-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+}

@@ -1,0 +1,14 @@
+// ABSTRACT
+@use '../abstracts/colors' as *;
+
+// BASE
+@use '../base/typography' as *;
+
+.btn {
+    background-color: $primary-color;
+    color: $black;
+    font-weight: map-get($font-weight, "bold");
+    border: none;
+    padding: 15px 20px;
+    border-radius: 2px;
+}
